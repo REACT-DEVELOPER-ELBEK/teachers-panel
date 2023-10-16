@@ -11,6 +11,7 @@ import {
 const Dashboard = () => {
   function LogOut(){
     localStorage.clear()
+    window.location.reload()
   }
   return (
     <nav>
