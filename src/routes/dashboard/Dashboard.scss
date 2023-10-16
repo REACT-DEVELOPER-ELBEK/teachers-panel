@@ -1,0 +1,56 @@
+nav {
+  border-radius: 15.633px;
+  background: linear-gradient(
+    0deg,
+    #925fe2 80.26%,
+    rgba(146, 95, 226, 0) 143.39%,
+    #e2d4f7 143.39%
+  );
+  padding: 0 20px;
+  left: 0px;
+  top: 0;
+  position: fixed;
+  height: 100vh;
+  .container {
+    .nav__wrapper {
+        padding: 31px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+        align-items: center;
+        justify-content: center;
+        .dash__links{
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            text-align: left;
+            a{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: rgba(255, 255, 255, 0.50);
+                text-align: center;
+                font-family: Poppins;
+                font-size: 18px;
+                font-weight: 400;
+            }
+            .active{
+                color: #fff;
+            }
+        }
+        button{
+            background: transparent;
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+            font-family: Poppins;
+            font-size: 18px;
+            font-weight: 400;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-right: 50px;
+            margin-top: 205px;
+        }
+    }
+  }
+}

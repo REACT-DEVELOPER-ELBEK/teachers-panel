@@ -1,0 +1,66 @@
+.login {
+  position: absolute;
+  right: 120px;
+  top: 20vh;
+  .container {
+    .login__wrapper {
+      display: flex;
+      align-items: center;
+      gap: 90px;
+      img {
+        width: 450px;
+      }
+      .login__form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        h2 {
+          font-size: 56px;
+        }
+        .login__inputs {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .password{
+            display: flex;
+            align-items: center;
+            position: relative;
+            button{
+                font-size: 23px;
+                position: absolute;
+                margin-left: 245px;
+                padding-top: 10px;
+                background: transparent;
+            }
+          }
+          input {
+            border-radius: 6px;
+            background: #d6d6f5;
+            padding-left: 15px;
+            border: none;
+            padding: 15px 50px;
+            &:valid {
+              color: #000;
+              font-family: Poppins;
+              font-size: 15px;
+              font-weight: 500;
+              line-height: 72%;
+            }
+          }
+          button{
+            padding: 5px 10px;
+            background: yellowgreen;
+            font-family: Poppins;
+            font-weight: 500;
+            font-size: 18px;
+            border-radius: 5px;
+            &:active{
+                transform: scale(0.9);
+                transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

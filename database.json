@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "firstName": "Elbek",
+      "lastName": "Yusupov",
+      "group": "N14",
+      "direction": "React",
+      "id": 1
+    },
+    {
+      "firstName": "Umar ",
+      "lastName": "Sobirov",
+      "group": "N14",
+      "direction": "React",
+      "id": 2
+    }
+  ]
+}

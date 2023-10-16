@@ -1,0 +1,25 @@
+.profile{
+    position: absolute;
+    right: 400px;
+    top: 20vh;
+    .container{
+        .profile__wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 1%;
+            h2{
+                font-size: 42px;
+            }
+            button{
+                padding: 10px 20px;
+                font-family: Poppins;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                border-radius: 5px;
+                background: rgb(106, 165, 17);
+                color: #fff;
+            }
+        }
+    }
+}
