@@ -1,0 +1,50 @@
+.update {
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    .container {
+      .update__wrapper {
+        h2 {
+          font-family: Poppins;
+          font-size: 30px;
+        }
+        .update__form {
+          margin-top: 50px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-column-gap: 30px;
+          grid-row-gap: 30px;
+          input {
+            border-radius: 6px;
+            background: #d6d6f5;
+            padding-left: 15px;
+            border: none;
+            padding: 10px;
+            &:valid {
+              color: #000;
+              font-family: Poppins;
+              font-size: 15px;
+              font-weight: 500;
+              line-height: 72%;
+            }
+          }
+        }
+        button{
+          border: none;
+          padding: 15px 25px;
+          margin-top: 50px;
+          border-radius: 6px;
+          background: yellowgreen;
+          font-family: Poppins;
+          font-weight: 500;
+          font-size: 15px;
+          &:hover{
+              box-shadow: -7px -10px 11px -5px rgba(34, 60, 80, 0.6);
+              transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+  

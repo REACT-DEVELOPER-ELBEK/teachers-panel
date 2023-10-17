@@ -5,6 +5,7 @@ import "./App.css";
 import Add from "./pages/addStudent/Add";
 import Login from "./pages/auth/Login";
 import Profile from "./pages/profile/Profile";
+import Update from "./pages/update/Update";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/add-student" element={<Add />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/edit/:id" element={<Update />} />
       </Routes>
     </>
   );

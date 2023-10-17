@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import "./Home.scss";
 import { greetBg } from "../../assets/img";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { TbEdit } from "react-icons/tb";
+import { MdDeleteForever } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   ///////// FENTCHING
@@ -13,6 +17,17 @@ const Home = () => {
       .catch((error) => console.log(error));
   }, []);
   const name = JSON.parse(localStorage.getItem("userName"));
+  function deleteStudent(id, name) {
+    axios.delete(`http://localhost:3000/students/${id}`);
+    toast.success(`${name} is successfully removed`, {
+      theme: "colored"
+    })
+    setTimeout(() => {
+      window.location.reload()
+    }, 1270);
+  }
+
+  let toEdit = useNavigate();
 
   const today = new Date();
   const month = today.getMonth();
@@ -36,6 +51,7 @@ const Home = () => {
   return !name ? (
     toLogin("/login")
   ) : (
+    <>
     <div className="home">
       <div className="container">
         <div className="home__wrapper">
@@ -56,6 +72,7 @@ const Home = () => {
                   <th>Last name</th>
                   <th>Group Number</th>
                   <th>Direction</th>
+                  <th>Buttons</th>
                 </tr>
               </thead>
               {students.map((student, index) => (
@@ -65,6 +82,16 @@ const Home = () => {
                     <td>{student.lastName}</td>
                     <td>{student.group}</td>
                     <td>{student.direction}</td>
+                    <td>
+                      <Link to={`/edit/${student.id}`}>
+                        <TbEdit />
+                      </Link>
+                      <button>
+                        <MdDeleteForever
+                          onClick={() => deleteStudent(student.id, student.firstName)}
+                        />
+                      </button>
+                    </td>
                   </tr>
                 </tbody>
               ))}
@@ -73,6 +100,8 @@ const Home = () => {
         </div>
       </div>
     </div>
+    <ToastContainer/>
+    </>
   );
 };
 

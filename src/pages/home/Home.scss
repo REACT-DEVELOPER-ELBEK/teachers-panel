@@ -56,6 +56,16 @@
             padding-top: 31px;
             padding-bottom: 31px;
             text-align: center;
+            &:last-child{
+              display: flex;
+              justify-content: center;
+              gap: 30px;
+              button, a{
+                font-size: 22px;
+                background: transparent;
+                color: #000;
+              }
+            }
           }
         }
       }
