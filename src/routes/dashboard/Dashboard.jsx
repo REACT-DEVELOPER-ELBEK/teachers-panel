@@ -13,9 +13,12 @@ import {
 const Dashboard = () => {
   function LogOut() {
     localStorage.clear();
-    toast.info("Please refresh site to logout", {
+    toast.success("Account successfully logged out", {
       theme: "colored",
     });
+    setTimeout(() => {
+      window.location.reload()
+    }, 1100);
   }
   return (
     <nav>
