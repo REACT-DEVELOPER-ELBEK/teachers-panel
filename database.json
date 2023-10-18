@@ -1,25 +1,12 @@
 {
   "students": [
     {
-      "firstName": "Yusupov ",
-      "lastName": "Elbek",
+      "firstName": "Elbek",
+      "lastName": "Yusupov",
       "group": "N14",
       "direction": "React",
-      "id": 1
-    },
-    {
-      "firstName": "Messi",
-      "lastName": "Leo",
-      "group": "N27",
-      "direction": "Angular",
+      "file": "blob:http://localhost:5173/99dd1afe-a7ba-4058-87bb-851497f321bb",
       "id": 2
-    },
-    {
-      "firstName": "Umarxon",
-      "lastName": "Sobirov",
-      "group": "N14",
-      "direction": "React",
-      "id": 3
     }
   ]
 }

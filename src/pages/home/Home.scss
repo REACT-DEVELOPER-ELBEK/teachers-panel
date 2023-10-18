@@ -53,8 +53,8 @@
             font-weight: 700;
             line-height: 72%;
             border-bottom: 1px solid #e8e8f1;
-            padding-top: 31px;
-            padding-bottom: 31px;
+            padding-top: 25px;
+            padding-bottom: 25px;
             text-align: center;
             &:last-child{
               display: flex;
@@ -64,6 +64,14 @@
                 font-size: 22px;
                 background: transparent;
                 color: #000;
+              }
+            }
+            &:first-child{
+              img{
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 40%;
               }
             }
           }

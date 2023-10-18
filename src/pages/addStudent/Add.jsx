@@ -25,6 +25,7 @@ const Add = () => {
         lastName,
         group,
         direction,
+        file,
       });
       toast.success("Student successfully added", {
         theme: "colored",
@@ -34,6 +35,15 @@ const Add = () => {
       }, 1200);
     }
   }
+
+  const [file, setFile] = useState("");
+  const formData = new FormData();
+  formData.append("image", file);
+  function addFile(e) {
+    const imgFile = URL.createObjectURL(e.target.files[0]);
+    setFile(imgFile);
+  }
+
   return (
     <div className="add">
       <div className="container">
@@ -59,6 +69,12 @@ const Add = () => {
               onChange={(e) => setDirection(e.target.value)}
               type="text"
               placeholder="Direction"
+            />
+            <input
+              type="file"
+              onChange={addFile}
+              id="fileInput"
+              accept="image/png, image/jpg, image/gif, image/jpeg"
             />
           </div>
           <button type="submit" onClick={() => postData()}>

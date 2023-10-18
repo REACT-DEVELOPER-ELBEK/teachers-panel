@@ -68,6 +68,7 @@ const Home = () => {
             <table>
               <thead>
                 <tr>
+                  <th>Image</th>
                   <th>First name</th>
                   <th>Last name</th>
                   <th>Group Number</th>
@@ -78,6 +79,7 @@ const Home = () => {
               {students.map((student, index) => (
                 <tbody key={index}>
                   <tr>
+                    <td><img src={student.file} alt="" /></td>
                     <td>{student.firstName}</td>
                     <td>{student.lastName}</td>
                     <td>{student.group}</td>
